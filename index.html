@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luxnova HQ</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #0f0f2b, #1a1a3d);
+            color: white;
+            overflow: hidden;
+        }
+        header {
+            background: rgba(255,255,255,0.05);
+            padding: 1em;
+            text-align: center;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #444;
+        }
+        nav {
+            width: 200px;
+            height: calc(100vh - 60px);
+            background: rgba(255,255,255,0.03);
+            position: fixed;
+            top: 60px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 1em;
+            text-align: left;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        nav button:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        main {
+            margin-left: 200px;
+            padding: 2em;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>LUXNOVA HQ</header>
+    <nav>
+        <button onclick="showSection('undercover')">Undercover Ops</button>
+        <button onclick="showSection('archive')">Astraea Archive</button>
+        <button onclick="showSection('cosmic')">Cosmic Tools</button>
+    </nav>
+    <main>
+        <section id="undercover" class="active">
+            <h2>Undercover Operations</h2>
+            <p>Access fake identities, decoy files, and stealth utilities.</p>
+        </section>
+        <section id="archive">
+            <h2>Astraea Archive</h2>
+            <p>Creative and spiritual constellations, writings, and tools.</p>
+        </section>
+        <section id="cosmic">
+            <h2>Cosmic Tools</h2>
+            <p>View moon phase, angel numbers, and alignment tools.</p>
+        </section>
+    </main>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>

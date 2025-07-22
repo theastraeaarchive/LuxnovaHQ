@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Luxnova HQ</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+    nav button {
+      padding: 10px 15px;
+      background: #5c4d9d;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    section {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <button onclick="show('undercover')">🕵️ Undercover</button>
+    <button onclick="show('archive')">🌠 Astraea Archive</button>
+    <button onclick="show('magic')">🔮 Magic</button>
+    <button onclick="show('tools')">🧠 Tools</button>
+  </nav>
+  <section id="undercover" style="display:block">Undercover ops tools go here.</section>
+  <section id="archive" style="display:none">Astraea Archive portal goes here.</section>
+  <section id="magic" style="display:none">Moon phases, rituals, etc.</section>
+  <section id="tools" style="display:none">Clipboard, Notion launcher, system actions.</section>
+
+  <script>
+    function show(tab) {
+      ['undercover', 'archive', 'magic', 'tools'].forEach(id => {
+        document.getElementById(id).style.display = (id === tab ? 'block' : 'none');
+      });
+    }
+  </script>
+</body>
+</html>

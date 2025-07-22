@@ -1,0 +1,12 @@
+{
+  "name": "luxnova-hq",
+  "version": "1.0.0",
+  "description": "Cosmic-Undercover OS Control Center",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^28.1.3"
+  }
+}
